@@ -1,0 +1,149 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--     <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+
+<!--   <style id="holderjs-style" type="text/css"></style></head> -->
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#aco">ACO</a></li>
+            <li><a href="#pso">PSO</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container" role="main">
+		
+	  <div id="aco">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="container-title jumbotron">
+        <h2>ACO</h2>       
+		<p>With this tool you can view step-by-step how the Ant System algorithm works. Each ant has a graphic representation and will, literally, follow its chosen path.</p>
+        <p>To use this tool you can follow the basic steps:
+		<ol>
+			<li>Check Configurations panel, there you can place every node where the ant can go.</li>
+			<li>Click Execute on Results panel, the first algorithm iteration will begin.</li>
+			<li>To advance you need to click on Deposit Pheromone then wait to ants complete this job.</li>
+			<li>From now you will need to click on Next Iteration then repeat from last step.</li>
+		</ol>
+		</p>
+      </div>
+      
+      <div class="row">
+      		<div class="col-sm-4">
+	      		<div id="panel-configurations" class="panel panel-primary">
+	      			<div class="panel-heading">Configuration</div>
+	      			<div class="panel-body">
+		      			<div class="row form-group">
+		      				<div class="col-sm-12">
+		      					<label class="control-label">Data "posX posY;" <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> texto/string<br/><br/><span class='graco-popover-bold'>Info</span><br/>From this data each node where the ant can go will be created.<br/><br/><span class='graco-popover-bold'>Example:</span><br/>State 1: X=100 and Y=200;<br />State 2: X=150 and Y=250;<br/><br/>In this example this field should be filled with:<br/>100 200; 150 250" class="glyphicon glyphicon-info-sign"></label>
+						     	<textarea id="data-data" class="form-control" rows="3" style="height: 150px">50 50;
+50 200;
+200 50;
+300 300;
+320 150;
+400 280;
+								</textarea>
+		      				</div>
+		      			</div>
+		      			
+		      			<div class="row form-group">
+		      				<div class="col-sm-4">
+		      					<label class="control-label">Ants <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> number/integer<br/><br/><span class='graco-popover-bold'>Info</span><br/>Number of ants that will be used to find a solution." class="glyphicon glyphicon-info-sign"></label>
+		      					<input id="data-number-of-ants" type="text" class="form-control" value="2">
+		      				</div>
+		      				<div class="col-sm-4">
+		      					<label class="control-label">Iterations <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> number/integer<br/><br/><span class='graco-popover-bold'>Info</span><br/>Maximum number of iterations until stop algorithm execution." class="glyphicon glyphicon-info-sign"></label>
+		      					<input id="data-number-of-iterations" type="text" class="form-control" value="10">
+		      				</div>
+		      				<div class="col-sm-4">
+		      					<label class="control-label">Evaporation <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> number/float<br/><br/><span class='graco-popover-bold'>Info</span><br/>Indicates the pheromone evaporation rate in every iteration." class="glyphicon glyphicon-info-sign"></label>
+		      					<input id="data-evaporation" type="text" class="form-control" value="0.5">
+		      				</div>
+		      			</div>
+		      			
+		      			<div class="row form-group">
+		      				<div class="col-sm-6">
+		      					<label class="control-label">Initial Pheromone <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> number/float<br/><br/><span class='graco-popover-bold'>Info</span><br/>Indicates the initial amount of pheromone in each node." class="glyphicon glyphicon-info-sign"></label>
+		      					<input id="data-initial-pheromone" type="text" class="form-control" value="0.1">
+		      				</div>
+		      				<div class="col-sm-6">
+		      					<label class="control-label">Constant <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> number/float<br/><br/><span class='graco-popover-bold'>Info</span><br/>A constant used to evaluate how good is a path found by the ants. Generally the values used are: 10, 100, 1000." class="glyphicon glyphicon-info-sign"></label>
+		      					<input id="data-constant" type="text" class="form-control" value="100">
+		      				</div>
+		      			</div>
+		      			
+		      			<div class="row form-group">
+		      				<div class="col-sm-6">
+		      					<label class="control-label">Alpha <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> number/float<br/><br/><span class='graco-popover-bold'>Info</span><br/>Exponent related to path's pheromone. It represents how much importance should be given to the pheromone." class="glyphicon glyphicon-info-sign"></label>
+		      					<input id="data-alpha" type="text" class="form-control" value="1">
+		      				</div>
+		      				<div class="col-sm-6">
+		      					<label class="control-label">Beta <span data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<span class='graco-popover-bold'>Entry type: </span> number/float<br/><br/><span class='graco-popover-bold'>Info</span><br/>Exponent related to ant's heuristic. It represents how much importance should be givem to the heuristic." class="glyphicon glyphicon-info-sign"></label>
+		      					<input id="data-beta" type="text" class="form-control" value="1">
+		      				</div>
+		      			</div>
+	      			</div>
+	      		</div>
+      		</div>
+      		
+      		<div class="col-sm-8 basic-column-right">
+      			<div id="panel-result" class="panel panel-primary">
+	      			<div class="panel-heading">Results<span id="result-iteration" style="display: none"> - Iteration <span id="result-iteration-current">1</span> of <span id="result-iteration-max">10</span><span id="result-iteration-best-info"> - Best path has the cost: <span id="result-iteration-best-info-cost"></span></span></span></div>
+	      			<div class="panel-body">
+	      				<div class="panel-result-config">
+   							<button type="button" id="btnExecute" class="btn btn-success"><span class="glyphicon glyphicon-play-circle"></span> Execute</button>
+   							<button type="button" id="btnDepositPheromone" class="btn btn-success disabled">Deposit Pheromone</button>
+   							<button type="button" id="btnNextIteration" class="btn btn-success disabled">Next Iteration</button>
+   							<button type="button" id="btnShowBestPath" style="display: none" class="btn btn-success" style="display: none">Show Best Path</button>
+	      				</div>
+						<canvas id="resultCanvas"></canvas>
+					</div>
+				</div>
+			</div>
+      		
+      </div>
+	  
+	  </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/easeljs-0.7.1.min.js"></script>
+    <script src="js/antsystem.js"></script>
+    <script src="js/graco.js"></script>
+
+</body></html>

@@ -1,0 +1,64 @@
+body {
+	padding-top: 70px;
+	padding-bottom: 30px;
+	background: url("../imgs/bg.png");
+}
+
+.navbar-brand {
+	color: white !important;
+}
+
+.container .container-title.jumbotron {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: rgba(0,0,0,0.2);
+	color: white;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+#panel-configurations {
+	background-color: rgba(0,0,0,0.2);
+	color: white;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+.basic-column {
+	background-color: #eee;
+	margin-left: 0;
+	margin-right: 0;
+	border-width: 1px;
+	border-color: #ddd;
+	border-radius: 4px 4px 0 0;
+	box-shadow: none;
+	padding: 10px;
+}
+
+.basic-column-right {
+	float: right;
+}
+
+#resultCanvas {
+/* 	width: 100%; */
+	background-color: white;
+}
+
+#panel-result .panel-body {
+	padding: 0px;
+}
+
+h2 {
+	margin-top: 10px;
+}
+
+#panel-result .panel-result-config {
+	padding: 5px;
+	border-bottom: 1px solid #999;
+}
+
+.graco-popover-bold {
+	font-weight: bold;
+}
+
+.control-label {
+	white-space: nowrap;
+}
