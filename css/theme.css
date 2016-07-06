@@ -4,6 +4,12 @@ body {
 	background: url("../imgs/bg.png");
 }
 
+canvas {
+	padding-top: 70px;
+	padding-bottom: 30px;
+	//background: url("../imgs/bg.jpg");
+}
+
 .navbar-brand {
 	color: white !important;
 }
